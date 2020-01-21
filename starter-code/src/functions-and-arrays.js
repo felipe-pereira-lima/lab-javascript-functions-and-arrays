@@ -42,7 +42,14 @@ sumArray(numbers);
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(array) {}
+function averageNumbers(array) {
+  if (array.length === 0) {
+    return null;
+  }
+  const total = sumArray(array);
+  const average = total / array.length;
+  return average;
+}
 
 // Level 2: Array of strings
 const wordsArr = [
@@ -58,6 +65,12 @@ const wordsArr = [
   'palace'
 ];
 
+function averageWordLength(array) {
+  if (array.length === 0);
+  {
+    return null;
+  }
+}
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
