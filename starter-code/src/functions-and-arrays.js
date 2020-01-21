@@ -16,6 +16,7 @@ function findLongestWord(words) {
   if (words.length === 0) {
     return null;
   }
+  //returns the word when called with a single-word array
   let auxiliaryWord = '';
   for (let i = 0; i < words.length; i++) {
     if (auxiliaryWord.length < words[i].length) {
@@ -69,12 +70,25 @@ returns the average of a the array */
 function averageWordLength(array) {
   if (array.length === 0) {
     return null;
+  } else {
+    let arrayLengthSum = 0;
+    array.forEach(x => (arrayLengthSum += x.length));
+    return arrayLengthSum / array.length;
   }
-
-  const total = sumArray(array);
-  const charCount = array.length;
-  return average;
 }
+/* 
+const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+function findLongestWord(array) {
+
+  let longest = array[0];
+  for (let word of array) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+  return longest;
+} */
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
